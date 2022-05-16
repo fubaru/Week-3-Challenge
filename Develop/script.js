@@ -15,6 +15,8 @@ function writePassword() {
 }
 
 function generatePassword() {
+  var finalpwd=""
+
   var size = prompt("Please enter 8 to 128 characters")
   console.log(size)
   // then do validation
@@ -33,7 +35,7 @@ function generatePassword() {
 
     if (isLowerCase===true) {
       var positionString = Math.floor(Math.random()*26)
-      console.log()
+      console.log(positionString)
     }
   } else {
     alert("invalid entry")
