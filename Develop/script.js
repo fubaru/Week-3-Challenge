@@ -36,6 +36,7 @@ function generatePassword() {
     if (isLowerCase===true) {
       var positionString = Math.floor(Math.random()*26)
       console.log(positionString)
+      finalpwd = finalpwd + lowercase[positionString]
     }
   } else {
     alert("invalid entry")
