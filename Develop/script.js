@@ -10,5 +10,10 @@ function writePassword() {
 
 }
 
+function generatePassrod() {
+  var size = prompt("Please enter 8 to 128 characters")
+
+}
+
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
