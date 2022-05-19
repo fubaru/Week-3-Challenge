@@ -1,9 +1,9 @@
 // Assignment Code
-var generateBtn = document.querySelector("#generate");
+var generateBtn = document.querySelector("#generate")
 var lowercase = "abcdefghijklmnopqrstuvwxyz"
 var uppercase = lowercase.toUpperCase()
-var number = "0123456789"
-var special = "!@#$%^&*()"
+var number = "0123456789".split("")
+var special = "!@#$%^&*()".split("")
 
 // Write password to the #password input
 function writePassword() {
@@ -33,42 +33,45 @@ function generatePassword() {
     var isSpecial = confirm("include special?");
     console.log(isSpecial);
 
-    for (var i = 0; i <= size; i++) {
-      if (isLowerCase===true && isUpperCase!==true && isNumber!==true && isSpecial!==true) {
-        var positionString = Math.floor(Math.random()*26);
+    for (var i = 0; i < size; i++) {
+      if (isLowerCase===true) {
+        var positionString = Math.floor(Math.random()*lowercase.length);
         console.log(positionString);
         finalpwd = finalpwd + lowercase[positionString];
 
-      } else if (isLowerCase!==true && isUpperCase===true && isNumber!==true &&isSpecial!==true) {
-        var positionString = Math.floor(Math.random()*26);
+      } 
+      
+      if (isUpperCase===true ) {
+        var positionString = Math.floor(Math.random()*uppercase.length);
         console.log(positionString);
         finalpwd = finalpwd + uppercase[positionString];
 
-      } else if (isLowerCase!==true && isUpperCase!==true && isNumber===true &&isSpecial!==true) {
-        var positionString = Math.floor(Math.random()*10);
+      } 
+      if (isNumber===true ) {
+        var positionString = Math.floor(Math.random()*number.length);
         console.log(positionString);
         finalpwd = finalpwd + number[positionString];
 
-      } else if (isLowerCase!==true && isUpperCase!==true && isNumber!==true &&isSpecial===true) {
-        var positionString = Math.floor(Math.random()*10);
+      } 
+      if (isSpecial===true) {
+        var positionString = Math.floor(Math.random()*special.length);
         console.log(positionString);
         finalpwd = finalpwd + special[positionString];
 
-      } else if (isLowerCase===true && isUpperCase===true && isNumber!==true &&isSpecial!==true) {
-        var positionString = Math.floor(Math.random()*10);
-        console.log(positionString);
-        finalpwd = finalpwd + lowercase[positionString] + uppercase[positionString];
-
-      }
+      } 
     }
-    return finalpwd;
+   finalpwd = finalpwd.split("").sort(function() {return 0.5 - Math.random()}).join("")
+
+   if (finalpwd.length > size) {
+     finalpwd = finalpwd.slice(0,size)
+   }
     
 
   } else {
     alert("invalid entry");
   }
 
- 
+  return finalpwd;
 
 
 
