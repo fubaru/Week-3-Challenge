@@ -16,7 +16,6 @@ function writePassword() {
 
 function generatePassword() {
   var finalpwd=""
-  var passwordLength = size; 
 
   var size = prompt("Please enter 8 to 128 characters")
   console.log(size)
@@ -35,24 +34,41 @@ function generatePassword() {
     console.log(isSpecial);
 
     for (var i = 0; i <= size; i++) {
-      if (isLowerCase===true) {
+      if (isLowerCase===true && isUpperCase!==true && isNumber!==true && isSpecial!==true) {
         var positionString = Math.floor(Math.random()*26);
         console.log(positionString);
         finalpwd = finalpwd + lowercase[positionString];
-      } else if (isUpperCase === true) {
+
+      } else if (isLowerCase!==true && isUpperCase===true && isNumber!==true &&isSpecial!==true) {
         var positionString = Math.floor(Math.random()*26);
         console.log(positionString);
         finalpwd = finalpwd + uppercase[positionString];
-      } 
-    }
 
+      } else if (isLowerCase!==true && isUpperCase!==true && isNumber===true &&isSpecial!==true) {
+        var positionString = Math.floor(Math.random()*10);
+        console.log(positionString);
+        finalpwd = finalpwd + number[positionString];
+
+      } else if (isLowerCase!==true && isUpperCase!==true && isNumber!==true &&isSpecial===true) {
+        var positionString = Math.floor(Math.random()*10);
+        console.log(positionString);
+        finalpwd = finalpwd + special[positionString];
+
+      } else if (isLowerCase===true && isUpperCase===true && isNumber!==true &&isSpecial===true) {
+        var positionString = Math.floor(Math.random()*10);
+        console.log(positionString);
+        finalpwd = finalpwd + lowercase[positionString] + uppercase[positionString];
+
+      }
+    }
+    return finalpwd;
     
 
   } else {
     alert("invalid entry");
   }
 
-  return finalpwd;
+ 
 
 
 
