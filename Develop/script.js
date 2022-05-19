@@ -57,7 +57,6 @@ function generatePassword() {
         var positionString = Math.floor(Math.random()*special.length);
         console.log(positionString);
         finalpwd = finalpwd + special[positionString];
-
       } 
     }
    finalpwd = finalpwd.split("").sort(function() {return 0.5 - Math.random()}).join("")
@@ -72,7 +71,6 @@ function generatePassword() {
   }
 
   return finalpwd;
-
 
 
 }
