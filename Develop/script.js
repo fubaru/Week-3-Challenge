@@ -1,6 +1,6 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-var lowercase = "abcedefghijklmnopqrstuvxyz"
+var lowercase = "abcdefghijklmnopqrstuvwxyz"
 var uppercase = lowercase.toUpperCase()
 var number = "0123456789"
 var special = "!@#$%^&*()"
@@ -28,7 +28,7 @@ function generatePassword() {
     console.log(isUpperCase)
 
     var isNumber = confirm("include number?")
-    console.log(isLowerCase)
+    console.log(isNumber)
 
     var isSpecial = confirm("include special?")
     console.log(isSpecial)
