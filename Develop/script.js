@@ -54,7 +54,7 @@ function generatePassword() {
         console.log(positionString);
         finalpwd = finalpwd + special[positionString];
 
-      } else if (isLowerCase===true && isUpperCase===true && isNumber!==true &&isSpecial===true) {
+      } else if (isLowerCase===true && isUpperCase===true && isNumber!==true &&isSpecial!==true) {
         var positionString = Math.floor(Math.random()*10);
         console.log(positionString);
         finalpwd = finalpwd + lowercase[positionString] + uppercase[positionString];
