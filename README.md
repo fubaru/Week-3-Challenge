@@ -25,8 +25,9 @@ Worked on the homework together with Erin Maxson and Marquis Willis to figure ou
 
 ## Badges
 
-![badmath](https://img.shields.io/badge/HTML-53.5%25-orange)
-![badmath](https://img.shields.io/badge/CSS-46.5%25-purple)
+![badmath](https://img.shields.io/badge/HTML-17.6%25-orange)
+![badmath](https://img.shields.io/badge/CSS-38.8%25-purple)
+![badmath](https://img.shields.io/badge/JavaScript-43.6-yellow)
 
 ## Features
 
