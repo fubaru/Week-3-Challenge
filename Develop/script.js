@@ -59,8 +59,9 @@ function generatePassword() {
         finalpwd = finalpwd + special[positionString];
       } 
     }
+    // worked with Marquis and Erin to come up with the password jumble
    finalpwd = finalpwd.split("").sort(function() {return 0.5 - Math.random()}).join("")
-
+    // worked with Marquis and Erin to test out the slice function to trim down the length of the password to match prompt 
    if (finalpwd.length > size) {
      finalpwd = finalpwd.slice(0,size)
    }
